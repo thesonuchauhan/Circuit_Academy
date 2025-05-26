@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Circuit Academy</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Circuit Academy</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="History.html" class="nav-item nav-link">History</a>
+                <a href="courses.html" class="nav-item nav-link">Tutorials</a>
+                <a href="quizzes.html" class="nav-item nav-link">Quizzes</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Logical Gates Section -->
+    <section id="logicalGates" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">AND Gate</h3>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="andInput1">
+                                <label class="form-check-label" for="andInput1">Input 1</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="andInput2">
+                                <label class="form-check-label" for="andInput2">Input 2</label>
+                            </div>
+                            <button class="btn btn-primary" onclick="checkAndGate()">Check Output</button>
+                            <p id="andOutput">Output:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">OR Gate</h3>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="orInput1">
+                                <label class="form-check-label" for="orInput1">Input 1</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="orInput2">
+                                <label class="form-check-label" for="orInput2">Input 2</label>
+                            </div>
+                            <button class="btn btn-primary" onclick="checkOrGate()">Check Output</button>
+                            <p id="orOutput">Output:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">NOT Gate</h3>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="notInput">
+                                <label class="form-check-label" for="notInput">Input</label>
+                            </div>
+                            <button class="btn btn-primary" onclick="checkNotGate()">Check Output</button>
+                            <p id="notOutput">Output:</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">NAND Gate</h3>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="nandInput1">
+                                <label class="form-check-label" for="nandInput1">Input 1</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="nandInput2">
+                                <label class="form-check-label" for="nandInput2">Input 2</label>
+                            </div>
+                            <button class="btn btn-primary" onclick="checkNandGate()">Check Output</button>
+                            <p id="nandOutput">Output:</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">NOR Gate</h3>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="norInput1">
+                                <label class="form-check-label" for="norInput1">Input 1</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="norInput2">
+                                <label class="form-check-label" for="norInput2">Input 2</label>
+                            </div>
+                            <button class="btn btn-primary" onclick="checkNorGate()">Check Output</button>
+                            <p id="norOutput">Output:</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h3 class="card-title">XOR Gate</h3>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="xorInput1">
+                                <label class="form-check-label" for="xorInput1">Input 1</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="xorInput2">
+                                <label class="form-check-label" for="xorInput2">Input 2</label>
+                            </div>
+                            <button class="btn btn-primary" onclick="checkXorGate()">Check Output</button>
+                            <p id="xorOutput">Output:</p>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- Logical Gates Section -->
+
+    <!-- Half Adder Circuit Section -->
+    <section id="halfAdder" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Half Adder Circuit</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="img/half_adder_circuit.png" alt="Half Adder Circuit" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <p>A half adder is a digital circuit that performs addition of two bits. It has two outputs: sum and carry.</p>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="halfAdderInputA">
+                        <label class="form-check-label" for="halfAdderInputA">Input A</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="halfAdderInputB">
+                        <label class="form-check-label" for="halfAdderInputB">Input B</label>
+                    </div>
+                    <button class="btn btn-primary" onclick="checkHalfAdder()">Check Output</button>
+                    <p id="halfAdderOutputSum">Output Sum:</p>
+                    <p id="halfAdderOutputCarry">Output Carry:</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Half Adder Circuit Section -->
+
+    <!-- Full Adder Circuit Section -->
+    <section id="fullAdder" class="section">
+        <div class="container">
+            <h2 class="section-title">Full Adder Circuit</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="img/full_adder_circuit.png" alt="Full Adder Circuit" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <p>A full adder is a digital circuit that performs addition of three bits: two significant bits and a carry-in bit.</p>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="fullAdderInputA">
+                        <label class="form-check-label" for="fullAdderInputA">Input A</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="fullAdderInputB">
+                        <label class="form-check-label" for="fullAdderInputB">Input B</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="fullAdderInputC">
+                        <label class="form-check-label" for="fullAdderInputC">Carry-in</label>
+                    </div>
+                    <button class="btn btn-primary" onclick="checkFullAdder()">Check Output</button>
+                    <p id="fullAdderOutputSum">Output Sum:</p>
+                    <p id="fullAdderOutputCarry">Output Carry:</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Full Adder Circuit Section -->
+
+    <!-- JavaScript Section -->
+    <script>
+        function checkAndGate() {
+            const input1 = document.getElementById('andInput1').checked;
+            const input2 = document.getElementById('andInput2').checked;
+            const output = input1 && input2;
+            document.getElementById('andOutput').innerText = 'Output: ' + output;
+        }
+
+        function checkOrGate() {
+            const input1 = document.getElementById('orInput1').checked;
+            const input2 = document.getElementById('orInput2').checked;
+            const output = input1 || input2;
+            document.getElementById('orOutput').innerText = 'Output: ' + output;
+        }
+
+        function checkNotGate() {
+            const input = document.getElementById('notInput').checked;
+            const output = !input;
+            document.getElementById('notOutput').innerText = 'Output: ' + output;
+        }
+
+        function checkNandGate() {
+            const input1 = document.getElementById('nandInput1').checked;
+            const input2 = document.getElementById('nandInput2').checked;
+            const output = !(input1 && input2);
+            document.getElementById('nandOutput').innerText = 'Output: ' + output;
+        }
+
+        function checkNorGate() {
+            const input1 = document.getElementById('norInput1').checked;
+            const input2 = document.getElementById('norInput2').checked;
+            const output = !(input1 || input2);
+            document.getElementById('norOutput').innerText = 'Output: ' + output;
+        }
+
+        function checkXorGate() {
+            const input1 = document.getElementById('xorInput1').checked;
+            const input2 = document.getElementById('xorInput2').checked;
+            const output = input1 ^ input2; // XOR operation
+            document.getElementById('xorOutput').innerText = 'Output: ' + output;
+        }
+
+        function checkHalfAdder() {
+            const inputA = document.getElementById('halfAdderInputA').checked;
+            const inputB = document.getElementById('halfAdderInputB').checked;
+            const sum = inputA ^ inputB; // XOR for sum
+            const carry = inputA && inputB; // AND for carry
+            document.getElementById('halfAdderOutputSum').innerText = 'Output Sum: ' + sum;
+            document.getElementById('halfAdderOutputCarry').innerText = 'Output Carry: ' + carry;
+        }
+
+        function checkFullAdder() {
+            const inputA = document.getElementById('fullAdderInputA').checked;
+            const inputB = document.getElementById('fullAdderInputB').checked;
+            const carryIn = document.getElementById('fullAdderInputC').checked;
+            const sum = (inputA ^ inputB) ^ carryIn; // XOR for sum
+            const carryOut = (inputA && inputB) || (carryIn && (inputA || inputB)); // Full adder carry logic
+            document.getElementById('fullAdderOutputSum').innerText = 'Output Sum: ' + sum;
+            document.getElementById('fullAdderOutputCarry').innerText = 'Output Carry: ' + carryOut;
+        }
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
